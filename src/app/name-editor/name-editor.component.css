@@ -1,0 +1,19 @@
+label{
+    float: left;
+    clear: left;
+    text-align: right;
+}
+input {
+  float: right;
+}
+#student {
+    width: 350px;
+    font-family: Calibri;  
+    font-size: 20px;
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20px auto;  
+    padding: 80px;  
+    background: #ddd;  
+    border-radius: 15px 
+    }
