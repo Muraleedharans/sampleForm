@@ -1,11 +1,11 @@
-<div id="student">
+<form id="student" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 <label for="name">Student Name: </label>
-<input id="name" type="text" [formControl]="name"><br>
+<input id="name" type="text" formControlName="name"><br>
 <label for="class">Class: </label>
-<input id="class" type="text" [formControl]="class"><br>
+<input id="class" type="text" formControlName="class"><br>
 <label for="roll">Roll Number: </label>
-<input id="roll" type="text" [formControl]="roll"><br>
+<input id="roll" type="text" formControlName="roll"><br>
 <label for="mark1">Mark 1: </label>
-<input id="mark1" type="text" [formControl]="mark1"><br>
-<button (click)="updateName()">Update Name</button>
-</div>
+<input id="mark1" type="text" formControlName="mark1"><br>
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>

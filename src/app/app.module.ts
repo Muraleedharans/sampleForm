@@ -9,7 +9,7 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent
+    NameEditorComponent,
   ],
   imports: [
     BrowserModule,

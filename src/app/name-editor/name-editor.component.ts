@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-name-editor',
@@ -7,11 +7,20 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./name-editor.component.css']
 })
 export class NameEditorComponent {
-  name = new FormControl('');
-  class= new FormControl('');
-  roll= new FormControl('');
-  mark1= new FormControl('');
-  updateName() {
-    
+ 
+  profileForm = new FormGroup({
+    name : new FormControl(''),
+    class : new FormControl(''),
+    roll : new FormControl(''),
+    mark1 : new FormControl(''),
+});
+  onSubmit() {
+      var student={};
+      student = this.profileForm.value;
+      console.log(JSON.stringify(student));
+      const p = document.createElement("p");
+      p.textContent = JSON.stringify(student);
+      document.body.appendChild(p);
   }
+
 }
