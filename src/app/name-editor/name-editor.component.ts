@@ -17,7 +17,6 @@ export class NameEditorComponent {
   onSubmit() {
       var student={};
       student = this.profileForm.value;
-      console.log(JSON.stringify(student));
       const p = document.createElement("p");
       p.textContent = JSON.stringify(student);
       document.body.appendChild(p);
