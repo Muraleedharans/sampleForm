@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-
+import { Validators } from '@angular/forms';
 @Component({
   selector: 'app-name-editor',
   templateUrl: './name-editor.component.html',
@@ -9,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class NameEditorComponent {
  
   profileForm = new FormGroup({
-    name : new FormControl(''),
+    name : new FormControl('', Validators.required),
     class : new FormControl(''),
     roll : new FormControl(''),
     mark1 : new FormControl(''),

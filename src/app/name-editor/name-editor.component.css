@@ -17,3 +17,8 @@ input {
     background: #ddd;  
     border-radius: 15px 
     }
+#submit{
+  padding: 10px;
+  float:right;
+  margin-top: 10px;
+}
